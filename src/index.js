@@ -4,9 +4,13 @@ import ReactDom from 'react-dom';
 const BookList = () => {
   return (
     <section>
-      this is a booklist
+      <Book />
     </section>
   )
+}
+
+const Book = () => {
+  return <article>this is a book</article>;
 }
 
 ReactDom.render(<BookList />, document.getElementById('root'))
