@@ -10,7 +10,8 @@ const BookList = () => {
 }
 
 const Book = () => {
-  return <article>this is a book</article>;
+  return <article><Image /></article>;
 }
+const Image = () => <img src='https://images-na.ssl-images-amazon.com/images/I/51-UG7rgajL._AC_SX368_.jpg' width='150' alt=''/>
 
 ReactDom.render(<BookList />, document.getElementById('root'))
