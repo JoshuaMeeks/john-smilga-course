@@ -7,12 +7,16 @@ const books = [
     img: 'https://images-na.ssl-images-amazon.com/images/I/71aG+xDKSYL._AC_UL900_SR900,600_.jpg',
     title: 'The 48 Laws of Power',
     author: 'Robert Greene',
-  }
-  ,
+  },
   {
     img: 'https://images-na.ssl-images-amazon.com/images/I/71QKQ9mwV7L._AC_UL900_SR900,600_.jpg',
     title: 'The Subtle Art of Not Giving a F*ck',
     author: 'Mark Manson',
+  }, 
+  {
+    img: 'https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR900,600_.jpg',
+    title: 'Atomic Habits',
+    author: 'James Clear',
   }
 ]
 
@@ -20,12 +24,9 @@ const BookList = () => {
   return (
     <section className="booklist">
      {books.map((book) => {
-      const {img, title, author} = book;
       return (
         <Book
-          img={img}
-          title={title}
-          author={author} 
+          book={book} 
         />
       )
      })}
@@ -33,7 +34,8 @@ const BookList = () => {
   )
 }
 
-const Book = ({ img, title, author }) => {
+const Book = (props) => {
+  const { img, title, author } = props.book;
   return <article className="book">
     <img src={img} width='200px' alt=''/>
     <h1>{title}</h1>
